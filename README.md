@@ -1,4 +1,6 @@
-# project-react-2-koremp
+# Fancheer
+
+Fancy한 Cheering, FanCheer
 
 Online cheering service for k-pop fans
 
