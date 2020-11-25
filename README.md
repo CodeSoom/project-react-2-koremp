@@ -1,5 +1,7 @@
 # project-react-2-koremp
 
+Online cheering service for k-pop fans
+
 1. 이 앱을 언제 사용하나요?
 
 온라인으로 연예인을 응원할 때 사용합니다. 응원 영상/음성 파일을 업로드할 때 사용합니다. 타인의 응원법을 볼 수도 있습니다.
