@@ -4,12 +4,14 @@ import { render } from '@testing-library/react';
 
 import { MemoryRouter } from 'react-router-dom';
 
-import App from './App';
+import Record from './Record';
 
-test('App', () => {
+test('Record', () => {
   const { getByText } = render((
     <MemoryRouter>
-      <App />
+      <Record />
     </MemoryRouter>
   ));
+
+  expect(getByText(/Record Page/)).not.toBeNull();
 });

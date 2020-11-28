@@ -3,13 +3,14 @@ import React from 'react';
 import { render } from '@testing-library/react';
 
 import { MemoryRouter } from 'react-router-dom';
+import About from './About';
 
-import App from './App';
-
-test('App', () => {
+test('About', () => {
   const { getByText } = render((
     <MemoryRouter>
-      <App />
+      <About />
     </MemoryRouter>
   ));
+
+  expect(getByText(/FanCheer/)).not.toBeNull();
 });

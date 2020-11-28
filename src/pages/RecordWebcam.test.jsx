@@ -1,15 +1,15 @@
 import React from 'react';
 
-import { render } from '@testing-library/react';
-
 import { MemoryRouter } from 'react-router-dom';
 
-import App from './App';
+import { render } from '@testing-library/react';
 
-test('App', () => {
+import RecordWebcam from './RecordWebcam';
+
+test('RecordWebcam', () => {
   const { getByText } = render((
     <MemoryRouter>
-      <App />
+      <RecordWebcam />
     </MemoryRouter>
   ));
 });

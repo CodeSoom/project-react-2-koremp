@@ -1,15 +1,15 @@
 import React from 'react';
 
-import { render } from '@testing-library/react';
-
 import { MemoryRouter } from 'react-router-dom';
 
-import App from './App';
+import { render } from '@testing-library/react';
 
-test('App', () => {
+import RecordMic from './RecordMic';
+
+test('RecordMic', () => {
   const { getByText } = render((
     <MemoryRouter>
-      <App />
+      <RecordMic />
     </MemoryRouter>
   ));
 });
