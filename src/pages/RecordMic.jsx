@@ -5,6 +5,5 @@ export default function RecordMic() {
     <div>
       <p>record mic</p>
     </div>
-
   );
 }
