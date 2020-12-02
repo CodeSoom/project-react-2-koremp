@@ -2,15 +2,12 @@ import React from 'react';
 
 import { render } from '@testing-library/react';
 
-import { MemoryRouter } from 'react-router-dom';
 import About from './About';
 
 test('About', () => {
   const { getByText } = render((
-    <MemoryRouter>
-      <About />
-    </MemoryRouter>
+    <About />
   ));
 
-  expect(getByText(/FanCheer/)).not.toBeNull();
+  expect(getByText('FanCheer is online cheering service.')).not.toBeNull();
 });
