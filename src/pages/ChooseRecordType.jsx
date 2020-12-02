@@ -10,7 +10,6 @@ export default function ChooseRecordType({ match }) {
         <li><Link to={`${match.path}/mic`}>mic</Link></li>
         <li><Link to={`${match.path}/webcam`}>webcam</Link></li>
       </ul>
-      <button onClick={() => console.log(match)}>test</button>
     </div>
   );
 }
