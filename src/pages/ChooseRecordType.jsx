@@ -2,13 +2,13 @@ import React from 'react';
 
 import { Link } from 'react-router-dom';
 
-export default function ChooseRecordType({ match }) {
+export default function ChooseRecordType() {
   return (
     <div>
       <h2>Choose Record Type</h2>
       <ul>
-        <li><Link to={`${match.path}/mic`}>mic</Link></li>
-        <li><Link to={`${match.path}/webcam`}>webcam</Link></li>
+        <li><Link to="/record/mic">mic</Link></li>
+        <li><Link to="/record/webcam">webcam</Link></li>
       </ul>
     </div>
   );
