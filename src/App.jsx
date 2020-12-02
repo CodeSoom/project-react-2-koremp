@@ -5,18 +5,12 @@ import { Switch, Route } from 'react-router-dom';
 import Home from './pages/Home';
 import About from './pages/About';
 import Record from './pages/Record';
-import RecordMic from './pages/RecordMic';
-import RecordWebcam from './pages/RecordWebcam';
+import Login from './pages/Login';
+import NotFound from './pages/NotFound';
 
-function Login() {
+function Cheer() {
   return (
-    <p>LoginPage</p>
-  );
-}
-
-function NotFound() {
-  return (
-    <p>404 Not Found</p>
+    <p>Cheer</p>
   );
 }
 
@@ -26,9 +20,8 @@ export default function App() {
       <Route exact path="/" component={Home} />
       <Route path="/about" component={About} />
       <Route path="/login" component={Login} />
+      <Route path="/cheer" component={Cheer} />
       <Route exact path="/record" component={Record} />
-      <Route path="/record/mic" component={RecordMic} />
-      <Route path="/record/webcam" component={RecordWebcam} />
       <Route component={NotFound} />
     </Switch>
   );
