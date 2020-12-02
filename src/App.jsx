@@ -30,8 +30,8 @@ export default function App() {
         <Route path="/login" component={Login} />
         <Route path="/cheer" component={Cheer} />
         <Route exact path="/record" component={ChooseRecordType} />
-        <Route path="record/mic" component={RecordMic} />
-        <Route path="record/webcam" component={RecordWebcam} />
+        <Route path="/record/mic" component={RecordMic} />
+        <Route path="/record/webcam" component={RecordWebcam} />
         <Route component={NotFound} />
       </Switch>
     </div>
