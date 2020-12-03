@@ -9,7 +9,7 @@ export default function Home() {
       <ul>
         <li><Link to="/about">About</Link></li>
         <li><Link to="/login">login</Link></li>
-        <li><Link to="/record">record</Link></li>
+        <li><Link to="/songs">songs</Link></li>
       </ul>
       <div>
         <p>To-do: Show cheering</p>
