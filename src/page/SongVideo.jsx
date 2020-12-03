@@ -1,9 +1,9 @@
 import React from 'react';
 
-export default function CheerSongVoice() {
+export default function SongVideo() {
   return (
     <div>
-      CheerSongVoice
+      SongVideo
     </div>
   );
 }
