@@ -1,12 +1,12 @@
 export async function fetchAgencies() {
-  const url = 'https://eatgo-customer-api.ahastudio.com/agencies';
+  const url = 'http://localhost:3000/agencies';
   const response = await fetch(url);
   const data = await response.json();
   return data;
 }
 
 export async function fetchArtists({ agencyName }) {
-  const url = 'https://eatgo-customer-api.ahastudio.com/artists'
+  const url = 'http://localhost:3000/artists'
     + `?agency=${agencyName}`;
   const response = await fetch(url);
   const data = await response.json();
@@ -14,7 +14,7 @@ export async function fetchArtists({ agencyName }) {
 }
 
 export async function fetchSongs({ artistName }) {
-  const url = 'https://eatgo-customer-api.ahastudio.com/songs'
+  const url = 'http://localhost:3000/songs'
     + `?artist=${artistName}`;
   const response = await fetch(url);
   const data = await response.json();
@@ -22,15 +22,15 @@ export async function fetchSongs({ artistName }) {
 }
 
 export async function fetchSong({ songId }) {
-  const url = 'https://eatgo-customer-api.ahastudio.com/songs'
-    + `/songs/${songId}`;
+  const url = 'http://localhost:3000/songs'
+    + `?${songId}`;
   const response = await fetch(url);
   const data = await response.json();
   return data;
 }
 
 export async function postLogin({ email, password }) {
-  const url = 'https://eatgo-login-api.ahastudio.com/session';
+  const url = 'http://localhost:3000/session';
   const response = await fetch(url, {
     method: 'POST',
     headers: {
