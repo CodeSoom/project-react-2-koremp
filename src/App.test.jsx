@@ -31,19 +31,11 @@ describe('App', () => {
     });
   });
 
-  context('with path /record', () => {
-    it('renders the record page', () => {
-      const { container } = renderApp({ path: '/record' });
+  context('with path /songs', () => {
+    it('renders the song list page', () => {
+      const { container } = renderApp({ path: '/songs' });
 
-      expect(container).toHaveTextContent('Record');
-    });
-  });
-
-  context('with path /xxx', () => {
-    it('renders the not found page', () => {
-      const { container } = renderApp({ path: '/xxx' });
-
-      expect(container).toHaveTextContent('404 Not Found');
+      expect(container).toHaveTextContent('Choose Agency, Artist, and Song.');
     });
   });
 });

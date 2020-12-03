@@ -2,19 +2,16 @@ import React from 'react';
 
 import { Switch, Route, Link } from 'react-router-dom';
 
-import Home from './pages/Home';
-import About from './pages/About';
-import Login from './pages/Login';
-import NotFound from './pages/NotFound';
-import ChooseRecordType from './pages/ChooseRecordType';
-import RecordMic from './pages/RecordMic';
-import RecordWebcam from './pages/RecordWebcam';
+import Home from './page/Home';
+import About from './page/About';
+import Login from './page/Login';
 
-function Cheer() {
-  return (
-    <p>Cheer</p>
-  );
-}
+import SongList from './page/SongList';
+import Song from './page/Song';
+import SongVoice from './page/SongVoice';
+import SongVideo from './page/SongVideo';
+
+import NotFound from './page/NotFound';
 
 export default function App() {
   return (
@@ -26,12 +23,15 @@ export default function App() {
       </header>
       <Switch>
         <Route exact path="/" component={Home} />
+
         <Route path="/about" component={About} />
         <Route path="/login" component={Login} />
-        <Route path="/cheer" component={Cheer} />
-        <Route exact path="/record" component={ChooseRecordType} />
-        <Route path="/record/mic" component={RecordMic} />
-        <Route path="/record/webcam" component={RecordWebcam} />
+
+        <Route exact path="/songs" component={SongList} />
+        <Route path="/songs/:id" component={Song} />
+        <Route path="/songs/:id/voice" component={SongVoice} />
+        <Route path="/songs/:id/video" component={SongVideo} />
+
         <Route component={NotFound} />
       </Switch>
     </div>
