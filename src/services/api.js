@@ -1,12 +1,12 @@
 export async function fetchAgencies() {
-  const url = 'http://localhost:3000/agencies';
+  const url = 'http://localhost:3000/agency';
   const response = await fetch(url);
   const data = await response.json();
   return data;
 }
 
 export async function fetchArtists({ agencyName }) {
-  const url = 'http://localhost:3000/artists'
+  const url = 'http://localhost:3000/artist'
     + `?agency=${agencyName}`;
   const response = await fetch(url);
   const data = await response.json();
@@ -14,7 +14,7 @@ export async function fetchArtists({ agencyName }) {
 }
 
 export async function fetchSongs({ artistName }) {
-  const url = 'http://localhost:3000/songs'
+  const url = 'http://localhost:3000/song'
     + `?artist=${artistName}`;
   const response = await fetch(url);
   const data = await response.json();
@@ -22,8 +22,8 @@ export async function fetchSongs({ artistName }) {
 }
 
 export async function fetchSong({ songId }) {
-  const url = 'http://localhost:3000/songs'
-    + `?${songId}`;
+  const url = 'http://localhost:3000/song'
+    + `?id=${songId}`;
   const response = await fetch(url);
   const data = await response.json();
   return data;

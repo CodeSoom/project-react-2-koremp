@@ -126,9 +126,19 @@ export function loadAgencies() {
   };
 }
 
-export function loadArtists({ agencyName }) {
-  return async (dispatch) => {
-    const artists = await fetchArtists({ agencyName });
+export function loadArtists() {
+  return async (dispatch, getState) => {
+    const {
+      selectedAgency: agency,
+    } = getState();
+
+    if (!agency) {
+      return;
+    }
+
+    const artists = await fetchArtists({
+      agencyName: agency.name,
+    });
     dispatch(setArtists(artists));
   };
 }
@@ -136,11 +146,10 @@ export function loadArtists({ agencyName }) {
 export function loadSongs() {
   return async (dispatch, getState) => {
     const {
-      selectedAgency: agency,
       selectedArtist: artist,
     } = getState();
 
-    if (!agency || !artist) {
+    if (!artist) {
       return;
     }
 

@@ -27,10 +27,10 @@ export default function App() {
         <Route path="/about" component={About} />
         <Route path="/login" component={Login} />
 
-        <Route exact path="/songs" component={SongList} />
-        <Route path="/songs/:id" component={Song} />
-        <Route path="/songs/:id/voice" component={SongVoice} />
-        <Route path="/songs/:id/video" component={SongVideo} />
+        <Route exact path="/song" component={SongList} />
+        <Route path="/song/:id" component={Song} />
+        <Route path="/song/:id/voice" component={SongVoice} />
+        <Route path="/song/:id/video" component={SongVideo} />
 
         <Route component={NotFound} />
       </Switch>
