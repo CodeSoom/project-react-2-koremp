@@ -4,12 +4,12 @@ import { MemoryRouter } from 'react-router-dom';
 
 import { render } from '@testing-library/react';
 
-import RecordWebcam from './RecordWebcam';
+import Home from './Home';
 
-test('RecordWebcam', () => {
-  const { getByText } = render((
+test('Home', () => {
+  render((
     <MemoryRouter>
-      <RecordWebcam />
+      <Home />
     </MemoryRouter>
   ));
 });
