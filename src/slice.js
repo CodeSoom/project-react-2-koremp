@@ -74,6 +74,14 @@ const reducers = {
     };
   },
 
+  selectSong(state, { payload: songId }) {
+    const { songs } = state;
+    return {
+      ...state,
+      selectedSong: songs.find(equal('id', songId)),
+    };
+  },
+
   changeLoginField(state, { payload: { name, value } }) {
     return {
       ...state,
@@ -112,6 +120,7 @@ export const {
   setSong,
   selectAgency,
   selectArtist,
+  selectSong,
   changeLoginField,
   setAccessToken,
   logout,
@@ -139,6 +148,8 @@ export function loadArtists() {
     const artists = await fetchArtists({
       agencyName: agency.name,
     });
+
+    dispatch(setSongs([]));
     dispatch(setArtists(artists));
   };
 }
@@ -156,6 +167,7 @@ export function loadSongs() {
     const songs = await fetchSongs({
       artistName: artist.name,
     });
+
     dispatch(setSongs(songs));
   };
 }
