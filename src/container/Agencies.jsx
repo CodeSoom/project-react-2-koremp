@@ -17,7 +17,7 @@ export default function Agencies() {
 
   function handleClick(agencyId) {
     dispatch(selectAgency(agencyId));
-    dispatch(loadArtists({ selectedAgency }));
+    dispatch(loadArtists());
   }
 
   return (

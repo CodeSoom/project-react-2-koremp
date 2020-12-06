@@ -29,8 +29,11 @@ export default function SongList() {
   return (
     <div>
       <h2>Choose Agency, Artist, and Song.</h2>
+      <p>Agency</p>
       <Agencies />
+      <p>Artist</p>
       <Artists />
+      <p>Song</p>
       <Songs onClickSong={handleClickSong} />
     </div>
   );

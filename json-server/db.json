@@ -1,5 +1,5 @@
 {
-  "agencies": [
+  "agency": [
     {"id":1,"name":"SM"},
     {"id":2,"name":"CUBE"},
     {"id":3,"name":"YG"},
@@ -7,7 +7,7 @@
     {"id":5,"name":"MagicStrawberrySound"},
     {"id":6,"name":"WM"}
   ],
-  "artists": [
+  "artist": [
     {"id":1,"name":"TAEMIN","agency":"SM"},
     {"id":2,"name":"BTOB","agency":"CUBE"},
     {"id":3,"name":"SHINEE","agency":"SM"},
@@ -25,7 +25,7 @@
     {"id":15,"name":"Yoon Jiyoung","agency":"MagicStrawberrySound"},
     {"id":16,"name":"SE SO NEON","agency":"MagicStrawberrySound"}
   ],
-  "songs": [
+  "song": [
     {"id":1,"artist":"BTOB","agency":"CUBE","name":"그리워하다"},
     {"id":2,"artist":"TAEMIN","agency":"SM","name":"WANT"},
     {"id":3,"artist":"SHINEE","agency":"SM","name":"Lucifer"},
@@ -71,6 +71,5 @@
       "agency":"MagicStrawberrySound",
       "name":"Athena"
     }
-  ],
-  "song": {"id":1,"artist":"BTOB","agency":"CUBE","name":"그리워하다"}
+  ]
 }
