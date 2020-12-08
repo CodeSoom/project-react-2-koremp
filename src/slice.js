@@ -74,6 +74,14 @@ const reducers = {
     };
   },
 
+  selectSong(state, { payload: songId }) {
+    const { songs } = state;
+    return {
+      ...state,
+      selectedSong: songs.find(equal('id', songId)),
+    };
+  },
+
   changeLoginField(state, { payload: { name, value } }) {
     return {
       ...state,
@@ -112,6 +120,7 @@ export const {
   setSong,
   selectAgency,
   selectArtist,
+  selectSong,
   changeLoginField,
   setAccessToken,
   logout,
@@ -126,9 +135,21 @@ export function loadAgencies() {
   };
 }
 
-export function loadArtists({ agencyName }) {
-  return async (dispatch) => {
-    const artists = await fetchArtists({ agencyName });
+export function loadArtists() {
+  return async (dispatch, getState) => {
+    const {
+      selectedAgency: agency,
+    } = getState();
+
+    if (!agency) {
+      return;
+    }
+
+    const artists = await fetchArtists({
+      agencyName: agency.name,
+    });
+
+    dispatch(setSongs([]));
     dispatch(setArtists(artists));
   };
 }
@@ -136,17 +157,17 @@ export function loadArtists({ agencyName }) {
 export function loadSongs() {
   return async (dispatch, getState) => {
     const {
-      selectedAgency: agency,
       selectedArtist: artist,
     } = getState();
 
-    if (!agency || !artist) {
+    if (!artist) {
       return;
     }
 
     const songs = await fetchSongs({
       artistName: artist.name,
     });
+
     dispatch(setSongs(songs));
   };
 }
