@@ -12,7 +12,7 @@ import store from './store';
 ReactDOM.render(
   (
     <Provider store={store}>
-      <BrowserRouter>
+      <BrowserRouter basename="https://codesoom.github.io/project-react-2-koremp/">
         <App />
       </BrowserRouter>
     </Provider>
