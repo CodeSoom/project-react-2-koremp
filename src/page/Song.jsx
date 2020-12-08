@@ -1,17 +1,15 @@
 import React, { useEffect, useState } from 'react';
-
-import { Link } from 'react-router-dom';
-
-import SongInfo from '../container/SongInfo';
-import AlbumInfo from '../container/AlbumInfo';
-import ArtistInfo from '../container/ArtistInfo';
+import YouTube from 'react-youtube';
 
 import { fetchSong } from '../services/api';
 
-function ValidSong({ song }) {
+function SongInfo({ song }) {
   const {
-    id, name, agency, artist,
+    id, name, agency, artist, mvUrl, cheerUrl,
   } = song;
+
+  console.log(song);
+  console.log(mvUrl);
 
   return (
     <div>
@@ -25,11 +23,32 @@ function ValidSong({ song }) {
         {artist}
         {' '}
       </p>
-      <SongInfo />
-      <AlbumInfo />
-      <ArtistInfo />
       <hr />
-      <Link to={`/song/${id}/record`}>to RecordPage</Link>
+      {
+        mvUrl
+          ? (
+            <iframe
+              title="MV URL"
+              width="420"
+              height="315"
+              src={mvUrl}
+            />
+          )
+          : <p>no mv url</p>
+      }
+      <hr />
+      {
+        cheerUrl
+          ? (
+            <iframe
+              title="Cheer URL"
+              width="420"
+              height="315"
+              src={cheerUrl}
+            />
+          )
+          : <p>no cheer url</p>
+      }
     </div>
   );
 }
@@ -50,9 +69,11 @@ export default function Song({ match }) {
 
   return (
     <>
-      {song
-        ? <ValidSong song={song} />
-        : <p>fetching</p>}
+      {
+        song
+          ? <SongInfo song={song} />
+          : <p>loading</p>
+      }
     </>
   );
 }
