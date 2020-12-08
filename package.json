@@ -11,12 +11,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/koremp/project-react-2-koremp.git"
+    "url": "git+https://github.com/CodeSoom/project-react-2-koremp.git"
   },
   "author": "koremp",
   "license": "Beerware",
   "bugs": {
-    "url": "https://github.com/koremp/project-react-2-koremp/issues"
+    "url": "https://github.com/CodeSoom/project-react-2-koremp/issues"
   },
   "homepage": "https://CodeSoom.github.io/project-react-2-koremp/",
   "devDependencies": {
