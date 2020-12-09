@@ -34,42 +34,44 @@ describe('api', () => {
   });
 
   describe('fetchArtists', () => {
+    const agencyName = 'SM';
+    const filteredArtists = ARTISTS.filter((artist) => artist.agency === agencyName);
+
     beforeEach(() => {
       mockFetch(ARTISTS);
     });
 
     it('returns artists', async () => {
-      const artists = await fetchArtists({
-        agencyName: 'SM',
-      });
+      const artists = await fetchArtists({ agencyName });
 
-      expect(artists).toEqual(ARTISTS);
+      expect(artists).toEqual(filteredArtists);
     });
   });
 
   describe('fetchSongs', () => {
+    const artistName = 'TAEMIN';
+    const filteredSongs = SONGS.filter((song) => song.artist === artistName);
+
     beforeEach(() => {
       mockFetch(SONGS);
     });
 
     it('returns songs', async () => {
-      const songs = await fetchSongs({
-        artistName: 'TAEMIN',
-      });
+      const songs = await fetchSongs({ artistName });
 
-      expect(songs).toEqual(SONGS);
+      expect(songs).toEqual(filteredSongs);
     });
   });
 
   describe('fetchSong', () => {
     beforeEach(() => {
-      mockFetch(SONGS);
+      mockFetch(SONG);
     });
 
-    it('returns songs', async () => {
-      const songs = await fetchSong({ songId: 1 });
+    it('returns song', async () => {
+      const song = await fetchSong({ songId: 1 });
 
-      expect(songs).toEqual(SONGS);
+      expect(song).toEqual(SONG);
     });
   });
 
