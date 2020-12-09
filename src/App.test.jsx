@@ -56,7 +56,7 @@ describe('App', () => {
 
   context('with path /songs', () => {
     it('renders the song list page', () => {
-      const { container } = renderApp({ path: '/songs' });
+      const { container } = renderApp({ path: '/song' });
 
       expect(container).toHaveTextContent('Choose Agency, Artist, and Song.');
       expect(container).toHaveTextContent('SM');
