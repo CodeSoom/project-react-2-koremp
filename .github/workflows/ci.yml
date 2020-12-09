@@ -14,6 +14,12 @@ jobs:
           node-version: '12.x'
       - run: npm ci
       - run: npm run build
+
+      - name: Move files
+        run: |
+          mv ./index.html ./dist/
+          mv ./404.html ./dist/
+
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
