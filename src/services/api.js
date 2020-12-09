@@ -23,7 +23,15 @@ function resolveArtists({ agencyName }) {
 function resolveSongs({ artistName }) {
   return new Promise((resolve) => {
     setTimeout(() => {
-      resolve(songs.filter((song) => song.filter(song.artist === artistName)));
+      resolve(songs.filter((song) => song.artist === artistName));
+    }, 100);
+  });
+}
+
+function resolveSong({ songId }) {
+  return new Promise((resolve) => {
+    setTimeout(() => {
+      resolve(songs.filter((song) => song.id === songId));
     }, 100);
   });
 }
@@ -59,7 +67,7 @@ export async function fetchSong({ songId }) {
   //   + `?id=${songId}`;
   // const response = await fetch(url);
   // const data = await response.json();
-  const data = songs.filter((song) => song.id === songId);
+  const data = await resolveSong({ songId });
   return data;
 }
 
