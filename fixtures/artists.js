@@ -5,7 +5,7 @@ const artists = [
   { id: 4, name: 'DAY6', agency: 'JYP' },
   { id: 5, name: 'Red Velvet', agency: 'SM' },
   { id: 6, name: 'Oh MyGirl', agency: 'WM' },
-  { id: 7, name: 'Minsoo', agency: 'MagicStrawberrySound' },
+  { id: 7, name: 'Minsu', agency: 'MagicStrawberrySound' },
   { id: 8, name: 'Park MoonChi', agency: 'MagicStrawberrySound' },
   { id: 9, name: 'BLACKPINK', agency: 'YG' },
   { id: 10, name: 'AKMU', agency: 'YG' },
