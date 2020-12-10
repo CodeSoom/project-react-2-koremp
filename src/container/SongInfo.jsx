@@ -1,16 +1,14 @@
 import React from 'react';
 
-import { useSelector } from 'react-redux';
-
-import { get } from '../utils';
-
-export default function SongInfo() {
-  const selectedSong = useSelector(get('selectedSong'));
-
+export default function SongInfo({
+  id, name, agency, artist,
+}) {
   return (
     <div>
-      this song is blah blah
-      {selectedSong}
+      <p>{id}</p>
+      <p>{name}</p>
+      <p>{agency}</p>
+      <p>{artist}</p>
     </div>
   );
 }
