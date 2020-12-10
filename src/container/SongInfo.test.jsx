@@ -9,7 +9,7 @@ import SongInfo from './SongInfo';
 describe('SongInfo', () => {
   const {
     id, name, agency, artist,
-  } = song;
+  } = song[0];
 
   it('shows id, name, agency, artist', () => {
     const { getByText } = render((
