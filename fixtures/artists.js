@@ -13,8 +13,7 @@ const artists = [
   { id: 12, name: 'f(x)', agency: 'SM' },
   { id: 13, name: 'TAEYANG', agency: 'YG' },
   { id: 14, name: 'B1A4', agency: 'WM' },
-  { id: 15, name: 'MINSU', agency: 'MagicStrawberrySound' },
-  { id: 16, name: 'SE SO NEON', agency: 'MagicStrawberrySound' },
+  { id: 15, name: 'SE SO NEON', agency: 'MagicStrawberrySound' },
 ];
 
 export default artists;
