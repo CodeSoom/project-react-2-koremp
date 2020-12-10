@@ -7,7 +7,7 @@ import About from './page/About';
 import Login from './page/Login';
 
 import SongList from './page/SongList';
-import Song from './page/Song';
+import SongDetail from './page/SongDetail';
 
 import NotFound from './page/NotFound';
 
@@ -26,7 +26,7 @@ export default function App() {
         <Route path="/login" component={Login} />
 
         <Route exact path="/song" component={SongList} />
-        <Route exact path="/song/:id" component={Song} />
+        <Route exact path="/song/:id" component={SongDetail} />
 
         <Route component={NotFound} />
       </Switch>
