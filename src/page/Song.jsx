@@ -70,7 +70,7 @@ export default function Song({ match }) {
   return (
     <>
       {
-        song
+        song !== false
           ? <SongInfo song={song} />
           : <p>loading</p>
       }
