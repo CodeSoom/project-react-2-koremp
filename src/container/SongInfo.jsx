@@ -4,14 +4,11 @@ export default function SongInfo({
   id, name, agency, artist,
 }) {
   return (
-    <p>
-      {id}
-      {' '}
-      {name}
-      {' '}
-      {agency}
-      {' '}
-      {artist}
-    </p>
+    <div>
+      <p>{id}</p>
+      <p>{name}</p>
+      <p>{agency}</p>
+      <p>{artist}</p>
+    </div>
   );
 }
