@@ -174,8 +174,6 @@ export function loadSongs() {
 
 export function loadSong({ songId }) {
   return async (dispatch) => {
-    dispatch(setSong(null));
-
     const song = await fetchSong({ songId });
 
     dispatch(setSong(song));
