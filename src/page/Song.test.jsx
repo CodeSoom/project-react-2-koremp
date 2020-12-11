@@ -35,7 +35,7 @@ describe('Song', () => {
     };
 
     const {
-      id, name, agency, artist, mvUrl, cheerUrl,
+      id, name, agency, artist,
     } = SONG[0];
 
     it('renders SongInfo', () => {
