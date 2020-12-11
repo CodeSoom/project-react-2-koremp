@@ -19,7 +19,7 @@ export default function Song({ match }) {
 
   useEffect(() => {
     dispatch(loadSong({ songId }));
-  });
+  }, [songId]);
 
   const song = useSelector(get('song'));
 
