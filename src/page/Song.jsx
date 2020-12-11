@@ -23,21 +23,23 @@ export default function Song({ match }) {
 
   const song = useSelector(get('song'));
 
-  if (song === undefined) {
-    return (
-      <p>unvalid song id</p>
-    );
-  }
-
   const {
     id, name, artist, agency, mvUrl, cheerUrl,
   } = song;
 
   return (
     <>
-      <SongInfo id={id} name={name} artist={artist} agency={agency} />
-      <SongMusicVideo name={name} mvUrl={mvUrl} />
-      <SongCheerVideo name={name} cheerUrl={cheerUrl} />
+      {
+        song
+          ? (
+            <>
+              <SongInfo id={id} name={name} artist={artist} agency={agency} />
+              <SongMusicVideo name={name} mvUrl={mvUrl} />
+              <SongCheerVideo name={name} cheerUrl={cheerUrl} />
+            </>
+          )
+          : <p>unvalid song id</p>
+      }
     </>
   );
 }
