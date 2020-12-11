@@ -5,7 +5,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { get } from '../utils';
 
 import {
-  loadSong, selectSong,
+  loadSong,
 } from '../slice';
 
 import SongInfo from '../container/SongInfo';
@@ -23,7 +23,7 @@ export default function Song({ match }) {
 
   const song = useSelector(get('song'));
 
-  if (!song) {
+  if (song === undefined) {
     return (
       <p>unvalid song id</p>
     );
