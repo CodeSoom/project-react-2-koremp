@@ -13,7 +13,7 @@ import SongMusicVideo from '../container/SongMusicVideo';
 import SongCheerVideo from '../container/SongCheerVideo';
 
 export default function Song({ match }) {
-  const songId = match.params.id;
+  const songId = parseInt(10, match.params.id);
 
   const dispatch = useDispatch();
 
@@ -23,23 +23,21 @@ export default function Song({ match }) {
 
   const song = useSelector(get('song'));
 
-  const {
-    id, name, artist, agency, mvUrl, cheerUrl,
-  } = song;
+  if (song) {
+    const {
+      id, name, artist, agency, mvUrl, cheerUrl,
+    } = song;
+
+    return (
+      <>
+        <SongInfo id={id} name={name} artist={artist} agency={agency} />
+        <SongMusicVideo name={name} mvUrl={mvUrl} />
+        <SongCheerVideo name={name} cheerUrl={cheerUrl} />
+      </>
+    );
+  }
 
   return (
-    <>
-      {
-        song
-          ? (
-            <>
-              <SongInfo id={id} name={name} artist={artist} agency={agency} />
-              <SongMusicVideo name={name} mvUrl={mvUrl} />
-              <SongCheerVideo name={name} cheerUrl={cheerUrl} />
-            </>
-          )
-          : <p>unvalid song id</p>
-      }
-    </>
+    <p>unvalid song id</p>
   );
 }
