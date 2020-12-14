@@ -31,7 +31,7 @@ function resolveSongs({ artistName }) {
 function resolveSong({ songId }) {
   return new Promise((resolve) => {
     setTimeout(() => {
-      resolve(songs.filter((song) => song.id === songId));
+      resolve(songs.find((song) => song.id === songId));
     }, 100);
   });
 }

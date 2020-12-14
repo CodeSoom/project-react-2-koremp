@@ -1,5 +1,5 @@
 import songs from './songs';
 
-const song = songs.filter((_) => _.id === 1);
+const song = songs.find((_) => _.id === 1);
 
 export default song;
