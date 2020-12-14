@@ -13,7 +13,14 @@ import SongMusicVideo from '../container/SongMusicVideo';
 import SongCheerVideo from '../container/SongCheerVideo';
 
 export default function Song({ match }) {
-  const songId = match.params.id;
+  // match.params.id 가 0이면 parseInt시 10으로 반환;
+  const songId = parseInt(10, match.params.id);
+
+  if (songId <= 0 || songId >= 21) {
+    return (
+      <p>no song in this id</p>
+    );
+  }
 
   const dispatch = useDispatch();
 
@@ -23,22 +30,18 @@ export default function Song({ match }) {
 
   const song = useSelector(get('song'));
 
-  const {
-    id, name, artist, agency, mvUrl, cheerUrl,
-  } = song;
-
   return (
     <>
       {
         song
           ? (
-            <>
-              <SongInfo id={id} name={name} artist={artist} agency={agency} />
-              <SongMusicVideo name={name} mvUrl={mvUrl} />
-              <SongCheerVideo name={name} cheerUrl={cheerUrl} />
-            </>
+            <div>
+              <SongInfo id={song.id} name={song.name} artist={song.artist} agency={song.agency} />
+              <SongMusicVideo name={song.name} mvUrl={song.mvUrl} />
+              <SongCheerVideo name={song.name} cheerUrl={song.cheerUrl} />
+            </div>
           )
-          : <p>unvalid song id</p>
+          : <p>loading</p>
       }
     </>
   );
