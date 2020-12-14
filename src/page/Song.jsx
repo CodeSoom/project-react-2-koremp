@@ -13,8 +13,9 @@ import SongMusicVideo from '../container/SongMusicVideo';
 import SongCheerVideo from '../container/SongCheerVideo';
 
 export default function Song({ match }) {
-  // match.params.id 가 0이면 parseInt시 10으로 반환;
-  const songId = parseInt(10, match.params.id);
+  const { id } = match.params;
+
+  const songId = (id === 0 ? 0 : (parseInt(10, id) || id));
 
   if (songId <= 0 || songId >= 21) {
     return (
