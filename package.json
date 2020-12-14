@@ -19,7 +19,7 @@
   "bugs": {
     "url": "https://github.com/CodeSoom/project-react-2-koremp/issues"
   },
-  "homepage": "https://CodeSoom.github.io/project-react-2-koremp/",
+  "homepage": "koremp.codesoom.com",
   "devDependencies": {
     "@babel/core": "^7.12.9",
     "@babel/preset-env": "^7.12.7",
