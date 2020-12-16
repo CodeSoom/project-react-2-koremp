@@ -2,6 +2,8 @@ import React from 'react';
 
 import { Switch, Route, Link } from 'react-router-dom';
 
+import styled from '@emotion/styled';
+
 import Home from './page/Home';
 import About from './page/About';
 import Login from './page/Login';
@@ -11,14 +13,35 @@ import Song from './page/Song';
 
 import NotFound from './page/NotFound';
 
+const Container = styled.div({
+  margin: '0 auto',
+  width: '90%',
+});
+
+const Header = styled.header({
+  background: '#EEE',
+  '& h1': {
+    fontSize: '1.5em',
+    margin: 0,
+    padding: '1em .5em',
+  },
+  '& a': {
+    color: '#555',
+    textDecoration: 'none',
+    '&:hover': {
+      color: '#000',
+    },
+  },
+});
+
 export default function App() {
   return (
-    <div>
-      <header>
+    <Container>
+      <Header>
         <h1>
-          <Link to="/">Header</Link>
+          <Link to="/">FanCheer</Link>
         </h1>
-      </header>
+      </Header>
       <Switch>
         <Route exact path="/" component={Home} />
 
@@ -30,6 +53,6 @@ export default function App() {
 
         <Route component={NotFound} />
       </Switch>
-    </div>
+    </Container>
   );
 }
