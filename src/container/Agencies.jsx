@@ -1,5 +1,7 @@
 import React from 'react';
 
+import styled from '@emotion/styled';
+
 import { useDispatch, useSelector } from 'react-redux';
 
 import {
@@ -8,6 +10,14 @@ import {
 } from '../slice';
 
 import { get } from '../utils';
+
+const List = styled.ul({
+  listStyle: 'none',
+});
+
+const Item = styled.li({
+
+});
 
 export default function Agencies() {
   const dispatch = useDispatch();
@@ -21,9 +31,9 @@ export default function Agencies() {
   }
 
   return (
-    <ul>
+    <List>
       {agencies.map((agency) => (
-        <li
+        <Item
           key={agency.id}
         >
           <button
@@ -37,8 +47,8 @@ export default function Agencies() {
               </>
             ) : null}
           </button>
-        </li>
+        </Item>
       ))}
-    </ul>
+    </List>
   );
 }
