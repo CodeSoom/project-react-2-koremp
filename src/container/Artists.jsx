@@ -9,6 +9,9 @@ import {
 
 import { get } from '../utils';
 
+import List from '../../styled/List';
+import Item from '../../styled/item';
+
 export default function Artists() {
   const dispatch = useDispatch();
 
@@ -21,9 +24,9 @@ export default function Artists() {
   }
 
   return (
-    <ul>
+    <List>
       {artists.map((artist) => (
-        <li
+        <Item
           key={artist.id}
         >
           <button
@@ -37,8 +40,8 @@ export default function Artists() {
               </>
             ) : null}
           </button>
-        </li>
+        </Item>
       ))}
-    </ul>
+    </List>
   );
 }

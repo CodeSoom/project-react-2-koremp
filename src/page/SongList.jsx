@@ -14,16 +14,14 @@ import {
   loadAgencies,
 } from '../slice';
 
-const Container = styled.div({
-  display: 'flex',
-  flex: '1',
+import DivideContainer from '../../styled/DivideContainer';
+
+const SongListPage = styled.div({
+
 });
 
-const DivideContainer = styled.div({
-  flex: '1',
-  '& p': {
-    fontWeight: 'bold',
-  },
+const ListContainer = styled.div({
+  display: 'flex',
 });
 
 export default function SongList() {
@@ -41,9 +39,9 @@ export default function SongList() {
   }
 
   return (
-    <div>
+    <SongListPage>
       <h2>소속사, 가수, 노래를 차례대로 선택하세요.</h2>
-      <Container>
+      <ListContainer>
         <DivideContainer>
           <p>소속사</p>
           <Agencies />
@@ -56,8 +54,8 @@ export default function SongList() {
           <p>노래</p>
           <Songs onClickSong={handleClickSong} />
         </DivideContainer>
-      </Container>
-    </div>
+      </ListContainer>
+    </SongListPage>
 
   );
 }

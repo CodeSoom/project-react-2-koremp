@@ -19,7 +19,7 @@ const Container = styled.div({
 });
 
 const Header = styled.header({
-  background: '#EEE',
+  background: '#222831',
   '& h1': {
     fontSize: '1.5em',
     margin: 0,

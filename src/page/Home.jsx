@@ -37,6 +37,9 @@ export default function Home() {
           <Item><Link to="/song">song</Link></Item>
         </List>
       </NavigationContainer>
+      <div>
+        Homepage에서 보여줄 내용
+      </div>
     </div>
   );
 }

@@ -1,7 +1,5 @@
 import React from 'react';
 
-import styled from '@emotion/styled';
-
 import { useDispatch, useSelector } from 'react-redux';
 
 import {
@@ -11,13 +9,8 @@ import {
 
 import { get } from '../utils';
 
-const List = styled.ul({
-  listStyle: 'none',
-});
-
-const Item = styled.li({
-
-});
+import List from '../../styled/List';
+import Item from '../../styled/Item';
 
 export default function Agencies() {
   const dispatch = useDispatch();
