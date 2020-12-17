@@ -11,6 +11,10 @@ import { get } from '../utils';
 
 import List from '../../styled/List';
 import Item from '../../styled/item';
+<<<<<<< Updated upstream
+=======
+import Button from '../../styled/Button';
+>>>>>>> Stashed changes
 
 export default function Artists() {
   const dispatch = useDispatch();
@@ -29,7 +33,7 @@ export default function Artists() {
         <Item
           key={artist.id}
         >
-          <button
+          <Button
             type="button"
             onClick={() => handleClick(artist.id)}
           >
@@ -39,7 +43,11 @@ export default function Artists() {
                 {artist.id === selectedArtist.id ? '(V)' : null}
               </>
             ) : null}
+<<<<<<< Updated upstream
           </button>
+=======
+          </Button>
+>>>>>>> Stashed changes
         </Item>
       ))}
     </List>
