@@ -10,7 +10,7 @@ import {
 import { get } from '../utils';
 
 import List from '../../styled/List';
-import Item from '../../styled/item';
+import Item from '../../styled/Item';
 import Button from '../../styled/Button';
 
 export default function Artists() {
