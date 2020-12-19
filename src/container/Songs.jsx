@@ -4,10 +4,6 @@ import { useSelector } from 'react-redux';
 
 import { get } from '../utils';
 
-import List from '../../styled/List';
-import Item from '../../styled/Item';
-import Button from '../../styled/Button';
-
 export default function Songs({ onClickSong }) {
   const songs = useSelector(get('songs'));
 
@@ -19,14 +15,14 @@ export default function Songs({ onClickSong }) {
   }
 
   return (
-    <List>
+    <ul>
       {songs.map((song) => (
-        <Item key={song.id}>
-          <Button href={`/song/${song.id}`} onClick={handleClick(song)}>
+        <li key={song.id}>
+          <a href={`/song/${song.id}`} onClick={handleClick(song)}>
             {song.name}
-          </Button>
-        </Item>
+          </a>
+        </li>
       ))}
-    </List>
+    </ul>
   );
 }

@@ -9,10 +9,6 @@ import {
 
 import { get } from '../utils';
 
-import List from '../../styled/List';
-import Item from '../../styled/Item';
-import Button from '../../styled/Button';
-
 export default function Agencies() {
   const dispatch = useDispatch();
 
@@ -25,19 +21,24 @@ export default function Agencies() {
   }
 
   return (
-    <List>
+    <ul>
       {agencies.map((agency) => (
-        <Item
+        <li
           key={agency.id}
         >
-          <Button
+          <button
             type="button"
             onClick={() => handleClick(agency.id)}
           >
             {agency.name}
-          </Button>
-        </Item>
+            {selectedAgency ? (
+              <>
+                {agency.id === selectedAgency.id ? '(V)' : null}
+              </>
+            ) : null}
+          </button>
+        </li>
       ))}
-    </List>
+    </ul>
   );
 }

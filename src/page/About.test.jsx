@@ -5,7 +5,9 @@ import { render } from '@testing-library/react';
 import About from './About';
 
 test('About', () => {
-  render((
+  const { getByText } = render((
     <About />
   ));
+
+  expect(getByText('FanCheer is online cheering service.')).not.toBeNull();
 });
