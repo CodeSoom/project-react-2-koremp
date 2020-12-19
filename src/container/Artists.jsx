@@ -9,6 +9,10 @@ import {
 
 import { get } from '../utils';
 
+import List from '../../styled/List';
+import Item from '../../styled/item';
+import Button from '../../styled/Button';
+
 export default function Artists() {
   const dispatch = useDispatch();
 
@@ -21,24 +25,19 @@ export default function Artists() {
   }
 
   return (
-    <ul>
+    <List>
       {artists.map((artist) => (
-        <li
+        <Item
           key={artist.id}
         >
-          <button
+          <Button
             type="button"
             onClick={() => handleClick(artist.id)}
           >
             {artist.name}
-            {selectedArtist ? (
-              <>
-                {artist.id === selectedArtist.id ? '(V)' : null}
-              </>
-            ) : null}
-          </button>
-        </li>
+          </Button>
+        </Item>
       ))}
-    </ul>
+    </List>
   );
 }

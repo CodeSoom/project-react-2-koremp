@@ -1,19 +1,44 @@
 import React from 'react';
 
+import styled from '@emotion/styled';
+
 import { Link } from 'react-router-dom';
+
+const NavigationContainer = styled.div({
+
+});
+
+const List = styled.ul({
+  display: 'flex',
+  margin: 0,
+  padding: 0,
+  listStyle: 'none',
+});
+
+const Item = styled.li({
+  marginRight: '1em',
+  '& a': {
+    color: '#333',
+    textDecoration: 'none',
+    '&:hover': {
+      fontWeight: 'bold',
+      color: '#000',
+    },
+  },
+});
 
 export default function Home() {
   return (
     <div>
-      <h2>Home of FanCheer</h2>
-      <ul>
-        <li><Link to="/about">About</Link></li>
-        <li><Link to="/login">login</Link></li>
-        <li><Link to="/song">song</Link></li>
-      </ul>
+      <NavigationContainer>
+        <List>
+          <Item><Link to="/about">About</Link></Item>
+          <Item><Link to="/login">login</Link></Item>
+          <Item><Link to="/song">song</Link></Item>
+        </List>
+      </NavigationContainer>
       <div>
-        <p>To-do: Show cheering</p>
-        <p>asdf</p>
+        Homepage에서 보여줄 내용
       </div>
     </div>
   );
