@@ -11,10 +11,7 @@ import { get } from '../utils';
 
 import List from '../../styled/List';
 import Item from '../../styled/Item';
-<<<<<<< Updated upstream
-=======
 import Button from '../../styled/Button';
->>>>>>> Stashed changes
 
 export default function Agencies() {
   const dispatch = useDispatch();

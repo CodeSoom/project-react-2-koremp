@@ -11,10 +11,7 @@ import { get } from '../utils';
 
 import List from '../../styled/List';
 import Item from '../../styled/item';
-<<<<<<< Updated upstream
-=======
 import Button from '../../styled/Button';
->>>>>>> Stashed changes
 
 export default function Artists() {
   const dispatch = useDispatch();
@@ -38,16 +35,7 @@ export default function Artists() {
             onClick={() => handleClick(artist.id)}
           >
             {artist.name}
-            {selectedArtist ? (
-              <>
-                {artist.id === selectedArtist.id ? '(V)' : null}
-              </>
-            ) : null}
-<<<<<<< Updated upstream
-          </button>
-=======
           </Button>
->>>>>>> Stashed changes
         </Item>
       ))}
     </List>
