@@ -11,3 +11,30 @@ COVID-19로 인해 콘서트 및 팬미팅 등의 활동을 참여할 수 없는
 ## 사용법
 
 원하는 가수의 노래를 선택하면 응원법 영상을 보여줍니다. 
+
+## Install dependencies
+```
+npm install
+```
+
+## Run web server
+```
+npm start
+```
+
+## Lint and fix
+```
+npm run lint
+```
+
+## Run unit tests
+```
+npm test
+# or
+npm run test:unit
+```
+
+## watch tests
+```
+npm run watch
+```
