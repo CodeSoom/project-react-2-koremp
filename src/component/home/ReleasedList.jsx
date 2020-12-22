@@ -2,12 +2,10 @@ import React from 'react';
 
 import styled from '@emotion/styled';
 
-export default function NavigationBar() {
+export default function ReleasedList() {
   return (
     <div>
-      <p>logo</p>
-      <p>user</p>
-      <p>CheerVideo</p>
+      Released Song List
     </div>
   );
 }
