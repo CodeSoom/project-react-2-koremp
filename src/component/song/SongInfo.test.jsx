@@ -2,7 +2,7 @@ import React from 'react';
 
 import { render } from '@testing-library/react';
 
-import song from '../../fixtures/song';
+import song from '../../../fixtures/song';
 
 import SongInfo from './SongInfo';
 

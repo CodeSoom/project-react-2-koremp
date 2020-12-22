@@ -4,16 +4,16 @@ import { render } from '@testing-library/react';
 
 import { useDispatch, useSelector } from 'react-redux';
 
-import Song from './Song';
+import SongPage from './SongPage';
 
 import SONG from '../../fixtures/song';
 
-describe('Song', () => {
+describe('SongPage', () => {
   const dispatch = jest.fn();
 
   function renderSong(match) {
     return render((
-      <Song match={match} />
+      <SongPage match={match} />
     ));
   }
 
