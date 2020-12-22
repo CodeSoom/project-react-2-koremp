@@ -2,8 +2,10 @@ import React from 'react';
 
 import { useHistory } from 'react-router-dom';
 
-import NavigationBar from '../component/NavigationBar';
-import Home from '../container/HomeContainer';
+import HomeContainer from '../container/HomeContainer';
+import NavigationBarContainer from '../container/NavigationBarContainer';
+
+import Container from '../styles/pages';
 
 export default function HomePage() {
   const history = useHistory();
@@ -13,9 +15,11 @@ export default function HomePage() {
   }
 
   return (
-    <>
-      <NavigationBar handleClickLink={handleClickLink} />
-      <Home />
-    </>
+    <Container>
+      <NavigationBarContainer
+        handleClickLink={handleClickLink}
+      />
+      <HomeContainer />
+    </Container>
   );
 }
