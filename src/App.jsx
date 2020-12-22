@@ -1,58 +1,23 @@
 import React from 'react';
 
-import { Switch, Route, Link } from 'react-router-dom';
+import { Switch, Route } from 'react-router-dom';
 
-import styled from '@emotion/styled';
+import HomePage from './page/HomePage';
+import SongListPage from './page/SongListPage';
+import SongPage from './page/SongPage';
+import NotFoundPage from './page/NotFoundPage';
 
-import Home from './page/Home';
-import About from './page/About';
-import Login from './page/Login';
-
-import SongList from './page/SongList';
-import Song from './page/Song';
-
-import NotFound from './page/NotFound';
-
-const Container = styled.div({
-  margin: '0 auto',
-  width: '90%',
-});
-
-const Header = styled.header({
-  background: '#222831',
-  '& h1': {
-    fontSize: '1.5em',
-    margin: 0,
-    padding: '1em .5em',
-  },
-  '& a': {
-    color: '#555',
-    textDecoration: 'none',
-    '&:hover': {
-      color: '#000',
-    },
-  },
-});
+import Root from './styles/Root';
 
 export default function App() {
   return (
-    <Container>
-      <Header>
-        <h1>
-          <Link to="/">FanCheer</Link>
-        </h1>
-      </Header>
+    <Root>
       <Switch>
-        <Route exact path="/" component={Home} />
-
-        <Route path="/about" component={About} />
-        <Route path="/login" component={Login} />
-
-        <Route exact path="/song" component={SongList} />
-        <Route exact path="/song/:id" component={Song} />
-
-        <Route component={NotFound} />
+        <Route exact path="/" component={HomePage} />
+        <Route exact path="/song" component={SongListPage} />
+        <Route exact path="/song/:id" component={SongPage} />
+        <Route component={NotFoundPage} />
       </Switch>
-    </Container>
+    </Root>
   );
 }
