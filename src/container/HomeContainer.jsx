@@ -1,12 +1,9 @@
 import React from 'react';
 
+import Home from '../component/Home';
+
 export default function HomeContainer() {
   return (
-    <div>
-      HomePage
-      Cheering Videos
-      Trending Music
-      New Released Album
-    </div>
+    <Home />
   );
 }
