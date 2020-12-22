@@ -2,7 +2,7 @@ import React from 'react';
 
 import { render } from '@testing-library/react';
 
-import song from '../../fixtures/song';
+import song from '../../../fixtures/song';
 
 import SongMusicVideo from './SongMusicVideo';
 
@@ -11,11 +11,9 @@ describe('SongMusicVideo', () => {
     const { mvUrl } = song;
 
     it('renders MusicVideo', () => {
-      const { } = render((
+      render((
         <SongMusicVideo mvUrl={mvUrl} />
       ));
-
-      expect();
     });
   });
 
