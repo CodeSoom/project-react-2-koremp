@@ -8,17 +8,8 @@ import NavigationBarContainer from '../container/NavigationBarContainer';
 import Container from '../styles/pages';
 
 export default function HomePage() {
-  const history = useHistory();
-
-  function handleClickLink(url) {
-    history.push(url);
-  }
-
   return (
     <Container>
-      <NavigationBarContainer
-        handleClickLink={handleClickLink}
-      />
       <HomeContainer />
     </Container>
   );

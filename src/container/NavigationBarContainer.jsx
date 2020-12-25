@@ -9,8 +9,6 @@ import NavigationBarLayout from '../styles/NavigationBarLayout';
 export default function NavigationBar({
   handleClickLink,
 }) {
-  const dispatch = useDispatch();
-
   function handleClickHome() {
     handleClickLink('/');
   }
@@ -20,7 +18,6 @@ export default function NavigationBar({
   }
 
   function handleClickSelectSong() {
-    dispatch();
     handleClickLink('/select-song');
   }
 
