@@ -2,8 +2,6 @@ import React, { useEffect } from 'react';
 
 import { useHistory } from 'react-router-dom';
 
-import NavigationBar from '../component/NavigationBar';
-
 export default function SongList() {
   const history = useHistory();
 
@@ -14,7 +12,6 @@ export default function SongList() {
 
   return (
     <>
-      <NavigationBar />
       <SongList handleClickSong={handleClickSong} />
     </>
   );
